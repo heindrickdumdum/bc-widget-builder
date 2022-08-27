@@ -1,0 +1,116 @@
+
+<style> 
+    #best-deals-{{_.id}} .flex { display: flex; }
+    #best-deals-{{_.id}} .justify-between { justify-content: space-between; }
+    #best-deals-{{_.id}} .best-deals-list {display: flex;flex-wrap: wrap;justify-content: center;margin: 0;gap: 20px; }
+    #best-deals-{{_.id}} .best-deals-list {display: flex;flex-wrap: wrap;justify-content: center;margin: 0;gap: 20px;list-style-type: none;padding: 0;} 
+    #best-deals-{{_.id}} .best-deals__item {text-align: center;min-width: 210px;}
+    #best-deals-{{_.id}} .best-deals__content { max-width: 240px; margin: auto; }
+    #best-deals-{{_.id}} .best-deals__image-wrapper a {
+        border: solid 5px #57915a;
+        border-radius: 100%;
+        width: 280px;
+        height: 280px;
+        /* position: relative; */
+        overflow: hidden;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        /* padding-bottom: 60px; */
+    }
+    #best-deals-{{_.id}} .best-deals__image-wrapper img {width: 100%;transform: scale(2);z-index: -9999;}
+    #best-deals-{{_.id}} .best-deals__badge {
+        position: absolute;
+        background-color: #57915a;
+        z-index: 10;
+        border-radius: 100%;
+        width: 145px;
+        height: 145px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 15px;
+        top: auto;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #best-deals-{{_.id}} .best-deals__image-wrapper {
+        padding-bottom: 60px;
+        position: relative;
+    }
+
+    #best-deals-{{_.id}} .badge-label {
+        color: #fff;
+        font-size: 28px;
+    }
+
+    #best-deals-{{_.id}} .badge-price {
+        color: #fff;
+        display: block;
+        font-size: 48px;
+    } 
+    #best-deals-{{_.id}} .prod-PriceBefore {
+        font-size: 14px;
+        font-weight: 600;
+        opacity: 0.5;
+    }
+
+    #best-deals-{{_.id}} .prod-PriceNow {
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+    @media screen and (max-width: 800px) {
+        #best-deals-{{_.id}} .best-deals__image-wrapper a {
+            width: 160px;
+            height: 160px;
+        }
+
+        #best-deals-{{_.id}} .best-deals__badge {
+            width: 82px;
+            height: 82px;
+        }
+        
+        #best-deals-{{_.id}} .best-deals-list { gap: 10px; }
+        #best-deals-{{_.id}} .best-deals__item { min-width: auto; max-width: 161px; }
+        #best-deals-{{_.id}} .badge-label { font-size: 16px; }
+        #best-deals-{{_.id}} .badge-price { font-size: 26px; }
+        #best-deals-{{_.id}} .best-deals__image-wrapper { padding-bottom: 30px; }
+        #best-deals-{{_.id}} .prod-title { font-size: 15px; font-weight: 500; }
+    }
+</style>
+<!--     
+<h1 id='widget-template-title'>best deals-widget</h1>
+<p id='bc-simple-text-{{_.id}}'>{{content}}</p> -->
+
+
+
+<div id='best-deals-{{_.id}}'>
+    <ul class='best-deals-list'>
+        {{#each BDItems}}
+        <li class='best-deals__item'>
+            <div class='best-deals__image-wrapper'>
+                <a href='{{ productLink }}'>
+                <img src='{{image.src}}' alt='{{image.alt}}' loading='lazy'>
+                <div class='best-deals__badge'>
+                    <span class='badge-label'>{{badgeLabel}}</span>
+                    <span class='badge-price'>{{badgePrice}}</span>
+                </div>
+                </a>
+            </div>
+            <div class='best-deals__content'>
+                <p class="prod-title">{{productTitle}}</p>
+                <div class="flex justify-between">
+                    <p class="prod-PriceBefore">{{productPriceBefore}}</p>
+                    <p class="prod-PriceNow">{{productPriceNow}}</p>
+                </div>
+            </div>
+        </li>
+        {{/each}}
+    </ul>
+</div>

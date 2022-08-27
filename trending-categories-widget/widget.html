@@ -1,0 +1,37 @@
+
+<style> 
+    #trending-categories-{{_.id}} .flex { display: flex; }
+    #trending-categories-{{_.id}} .justify-between { justify-content: space-between; }
+    .trending-categories-list { display: flex; list-style-type: none; gap: 35px; }
+    .trending-categories__item {max-width: 277px;background-color: #ebeded;}
+    .trending-categories__content {text-align: center;padding: 13px 20px;}
+    .trending-categories__image-wrapper img {width: 100%;display: block;}
+    .category-title {margin: 0;font-size: 16px;font-weight: bold;line-height: 1;letter-spacing: 0.54px;color: #2a3a40;}
+    .btn-wrapper { display: none; }
+    @media screen and (max-width: 800px) {
+
+    }
+</style>
+<!--     
+<h1 id='widget-template-title'>best deals-widget</h1>
+<p id='bc-simple-text-{{_.id}}'>{{content}}</p> -->
+
+
+
+<div id='trending-categories-{{_.id}}'>
+    <ul class='trending-categories-list'>
+        {{#each trendingCategories}}
+        <li class='trending-categories__item'>
+            <div class='trending-categories__image-wrapper'>
+                <img src='{{image.src}}' alt='{{image.alt}}' loading='lazy'>
+            </div>
+            <div class='trending-categories__content'>
+                <p class="category-title">{{categoryTitle}}</p>
+                <div class="btn-wrapper">
+                    <a href="{{ categoryLink }}" class="shop-now-link">SHOP NOW</a>
+                </div>
+            </div>
+        </li>
+        {{/each}}
+    </ul>
+</div>
