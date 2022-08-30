@@ -3,7 +3,7 @@
     "type":"array",
     "label":"Trending Categories",
     "id":"trendingCategories",
-    "defaultCount": 4,
+    "defaultCount": 6,
     "entryLabel": "Trending Categories Item",
     "thumbnail": {
         "type": "image",
@@ -21,7 +21,7 @@
                             "label": "Image",
                             "id": "image",
                             "default": {
-                                "src": "https://images.unsplash.com/photo-1487700160041-babef9c3cb55?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=80",
+                                "src": "https://images.unsplash.com/photo-1487700160041-babef9c3cb55?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=277&h=230&q=80",
                                 "type": "IMAGE_MANAGER"
                             }
                         },

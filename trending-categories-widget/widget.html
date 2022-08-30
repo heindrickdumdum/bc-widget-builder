@@ -1,15 +1,27 @@
 
 <style> 
-    #trending-categories-{{_.id}} .flex { display: flex; }
-    #trending-categories-{{_.id}} .justify-between { justify-content: space-between; }
-    .trending-categories-list { display: flex; list-style-type: none; gap: 35px; }
-    .trending-categories__item {max-width: 277px;background-color: #ebeded;}
-    .trending-categories__content {text-align: center;padding: 13px 20px;}
-    .trending-categories__image-wrapper img {width: 100%;display: block;}
-    .category-title {margin: 0;font-size: 16px;font-weight: bold;line-height: 1;letter-spacing: 0.54px;color: #2a3a40;}
-    .btn-wrapper { display: none; }
+    #trending-categories-{{_.id}} .rg-flex { display: flex; } 
+    #trending-categories-{{_.id}} .rg-flex-wrap { flex-wrap: wrap; } 
+    #trending-categories-{{_.id}} .rg-justify-between { justify-content: space-between; } 
+    #trending-categories-{{_.id}} .rg-justify-center { justify-content: center; } 
+    #trending-categories-{{_.id}} .rg-max-h-\[230px\] { max-height: 230px; } 
+    #trending-categories-{{_.id}} .rg-bg-green { background-color: #57915a; } 
+    #trending-categories-{{_.id}} .shop-now-link { padding: 20px 0; border-radius: 5px; padding-left: 10px; padding-right: 10px; padding-top: 7px; padding-bottom: 7px; display: block; color: #fff; text-decoration: none; max-width: 129px; margin: 0 auto; line-height: 1; } 
+    #trending-categories-{{_.id}} .btn-wrapper { overflow: hidden; transition: ease 0.2s all; height: 0; } 
+    #trending-categories-{{_.id}} .trending-categories__content,
+    #trending-categories-{{_.id}} .trending-categories__wrapper { transition: ease 0.2s all; background-color: #ebeded; } 
+    #trending-categories-{{_.id}} .trending-categories-list { list-style-type: none; gap: 35px; padding: 0; } 
+    #trending-categories-{{_.id}} .trending-categories__content { text-align: center; padding: 13px 20px; background-color: #ebeded; z-index: 10; } 
+    #trending-categories-{{_.id}} .trending-categories__image-wrapper img { width: 100%; display: block; } 
+    #trending-categories-{{_.id}} .category-title { margin: 0; font-size: 16px; font-weight: bold; line-height: 1; letter-spacing: 0.54px; color: #2a3a40; } 
+    #trending-categories-{{_.id}} .trending-categories__item { max-width: 277px; } 
+    #trending-categories-{{_.id}} .trending-categories__item:hover .trending-categories__content { margin-top: -35px; } 
+    #trending-categories-{{_.id}} .trending-categories__item:hover .trending-categories__image-wrapper { position: relative; z-index: -1; } 
+    #trending-categories-{{_.id}} .trending-categories__item:hover .trending-categories__wrapper { transform: scale(1.1); box-shadow: 0px 0px 12px #000000; } 
+    #trending-categories-{{_.id}} .trending-categories__item:hover .btn-wrapper { height: 30px; margin-top: 10px; } 
     @media screen and (max-width: 800px) {
-
+        #trending-categories-{{_.id}} .trending-categories__item { max-width: 40%; }
+        #trending-categories-{{_.id}} .trending-categories-list { gap: 16px; }
     }
 </style>
 <!--     
@@ -19,16 +31,20 @@
 
 
 <div id='trending-categories-{{_.id}}'>
-    <ul class='trending-categories-list'>
+    <ul class='trending-categories-list rg-flex rg-justify-center rg-flex-wrap'>
         {{#each trendingCategories}}
         <li class='trending-categories__item'>
-            <div class='trending-categories__image-wrapper'>
-                <img src='{{image.src}}' alt='{{image.alt}}' loading='lazy'>
-            </div>
-            <div class='trending-categories__content'>
-                <p class="category-title">{{categoryTitle}}</p>
-                <div class="btn-wrapper">
-                    <a href="{{ categoryLink }}" class="shop-now-link">SHOP NOW</a>
+            <div class="trending-categories__wrapper">
+                <div class='trending-categories__image-wrapper'>
+                    <img class="rg-max-h-[230px]" src='{{image.src}}' alt='{{image.alt}}' loading='lazy'>
+                </div>
+                <div class='trending-categories__content'>
+                    <div class="category-title-wrapper">
+                        <p class="category-title">{{categoryTitle}}</p>
+                    </div>
+                    <div class="btn-wrapper">
+                        <a href="{{ categoryLink }}" class="shop-now-link rg-bg-green">SHOP NOW</a>
+                    </div>
                 </div>
             </div>
         </li>
