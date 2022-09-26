@@ -3,7 +3,7 @@
     "type":"array",
     "label":"Trending Categories",
     "id":"trendingCategories",
-    "defaultCount": 6,
+    "defaultCount": 8,
     "entryLabel": "Trending Categories Item",
     "thumbnail": {
         "type": "image",
