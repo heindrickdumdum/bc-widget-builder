@@ -1,6 +1,7 @@
 
 <style> 
     #trending-categories-{{_.id}} .rg-flex { display: flex; } 
+    #trending-categories-{{_.id}} .no-underline { text-decoration-line: none; } 
     #trending-categories-{{_.id}} .rg-flex-wrap { flex-wrap: wrap; } 
     #trending-categories-{{_.id}} .rg-justify-between { justify-content: space-between; } 
     #trending-categories-{{_.id}} .rg-justify-center { justify-content: center; } 
@@ -33,20 +34,22 @@
 <div id='trending-categories-{{_.id}}'>
     <ul class='trending-categories-list rg-flex rg-justify-center rg-flex-wrap'>
         {{#each trendingCategories}}
-        <li class='trending-categories__item'>
-            <div class="trending-categories__wrapper">
-                <div class='trending-categories__image-wrapper'>
-                    <img class="rg-max-h-[230px]" src='{{image.src}}' alt='{{image.alt}}' loading='lazy'>
-                </div>
-                <div class='trending-categories__content'>
-                    <div class="category-title-wrapper">
-                        <p class="category-title">{{categoryTitle}}</p>
+        <li class='trending-categories__item '>
+            <a href="{{ categoryLink }}" class="no-underline">
+                <div class="trending-categories__wrapper">
+                    <div class='trending-categories__image-wrapper'>
+                        <img class="rg-max-h-[230px]" src='{{image.src}}' alt='{{image.alt}}' loading='lazy'>
                     </div>
-                    <div class="btn-wrapper">
-                        <a href="{{ categoryLink }}" class="shop-now-link rg-bg-green">SHOP NOW</a>
+                    <div class='trending-categories__content'>
+                        <div class="category-title-wrapper">
+                            <p class="category-title">{{categoryTitle}}</p>
+                        </div>
+                        <div class="btn-wrapper">
+                            <button class="shop-now-link rg-bg-green">SHOP NOW</button>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </a>
         </li>
         {{/each}}
     </ul>
