@@ -6,7 +6,7 @@
     #best-deals-{{_.id}} .best-deals__item {text-align: center;min-width: 210px;}
     #best-deals-{{_.id}} .best-deals__content { max-width: 240px; margin: auto; }
     #best-deals-{{_.id}} .best-deals__image-wrapper a {
-        border: solid 5px #57915a;
+        border: solid 5px;
         border-radius: 100%;
         width: 280px;
         height: 280px;
@@ -17,10 +17,14 @@
         align-items: center;
         /* padding-bottom: 60px; */
     }
-    #best-deals-{{_.id}} .best-deals__image-wrapper img {width: 100%;transform: scale(2);z-index: -9999;}
+    #best-deals-{{_.id}} .best-deals__image-wrapper img {
+        width: 100%;
+        /* transform: scale(2); */
+        z-index: -9999;
+    }
     #best-deals-{{_.id}} .best-deals__badge {
         position: absolute;
-        background-color: #57915a;
+        /* background-color: #57915a; */
         z-index: 10;
         border-radius: 100%;
         width: 145px;
@@ -64,6 +68,10 @@
         font-weight: bold;
     }
 
+    #best-deals-{{_.id}} .best-deals__badge[data-bagdelabel=""][data-badgeprice=""] {
+    background-color: transparent !important;
+    }
+
     @media screen and (max-width: 800px) {
         #best-deals-{{_.id}} .best-deals__image-wrapper a {
             width: 160px;
@@ -94,19 +102,19 @@
         {{#each BDItems}}
         <li class='best-deals__item'>
             <div class='best-deals__image-wrapper'>
-                <a href='{{ productLink }}'>
+                <a href='{{ productLink }}' style="border-color: {{ BadgeColor }}">
                 <img src='{{image.src}}' alt='{{image.alt}}' loading='lazy'>
-                <div class='best-deals__badge'>
-                    <span class='badge-label'>{{badgeLabel}}</span>
-                    <span class='badge-price'>{{badgePrice}}</span>
+                <div class='best-deals__badge' data-bagdelabel="{{badgeLabel}}" data-badgeprice="{{badgePrice}}" style="background-color: {{ BadgeColor }};">
+                    <span class='badge-label' style="font-size: {{badgeLabelFontSize}}px;">{{badgeLabel}}</span>
+                    <span class='badge-price' style="font-size: {{badgePriceFontSize}}px;">{{badgePrice}}</span>
                 </div>
                 </a>
             </div>
             <div class='best-deals__content'>
-                <p class="prod-title">{{productTitle}}</p>
+                <p class="prod-title" style="font-size: {{productTitleFontSize}}px;">{{productTitle}}</p>
                 <div class="flex justify-between">
-                    <p class="prod-PriceBefore">{{productPriceBefore}}</p>
-                    <p class="prod-PriceNow">{{productPriceNow}}</p>
+                    <p class="prod-PriceBefore" style="font-size: {{productPriceBeforeFontSize}}px;">{{productPriceBefore}}</p>
+                    <p class="prod-PriceNow" style="font-size: {{productPriceNowFontSize}}px;">{{productPriceNow}}</p>
                 </div>
             </div>
         </li>

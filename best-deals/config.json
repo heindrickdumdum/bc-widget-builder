@@ -6,11 +6,15 @@
         "type": "IMAGE_MANAGER"
       },
       "badgeLabel": "SAVE",
+      "badgeLabelFontSize": "28",
       "badgePrice": "£0",
+      "badgePriceFontSize": "37",
       "productTitle": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      "productTitleFontSize": "14",
       "productPriceBefore": "Was £0",
       "productPriceNow": "Now £0",
-      "productLink": "http://www.link.com"
+      "productLink": "http://www.link.com",
+      "BadgeColor": "#57915a"
     },
     {
       "image": {
@@ -18,11 +22,15 @@
         "type": "IMAGE_MANAGER"
       },
       "badgeLabel": "SAVE",
+      "badgeLabelFontSize": "28",
       "badgePrice": "£0",
+      "badgePriceFontSize": "37",
       "productTitle": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      "productTitleFontSize": "14",
       "productPriceBefore": "Was £0",
       "productPriceNow": "Now £0",
-      "productLink": "http://www.link.com"
+      "productLink": "http://www.link.com",
+      "BadgeColor": "#57915a"
     },
     {
       "image": {
@@ -30,11 +38,15 @@
         "type": "IMAGE_MANAGER"
       },
       "badgeLabel": "SAVE",
+      "badgeLabelFontSize": "28",
       "badgePrice": "£0",
+      "badgePriceFontSize": "37",
       "productTitle": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      "productTitleFontSize": "14",
       "productPriceBefore": "Was £0",
       "productPriceNow": "Now £0",
-      "productLink": "http://www.link.com"
+      "productLink": "http://www.link.com",
+      "BadgeColor": "#57915a"
     },
     {
       "image": {
@@ -42,11 +54,15 @@
         "type": "IMAGE_MANAGER"
       },
       "badgeLabel": "SAVE",
+      "badgeLabelFontSize": "28",
       "badgePrice": "£0",
+      "badgePriceFontSize": "37",
       "productTitle": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      "productTitleFontSize": "14",
       "productPriceBefore": "Was £0",
       "productPriceNow": "Now £0",
-      "productLink": "http://www.link.com"
+      "productLink": "http://www.link.com",
+      "BadgeColor": "#57915a"
     }
   ]
 }

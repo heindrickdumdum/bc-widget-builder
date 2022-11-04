@@ -33,9 +33,21 @@
                         },
                         {
                             "type": "input",
+                            "label": "Badge Label Font Size (px)",
+                            "id": "badgeLabelFontSize",
+                            "default": "28"
+                        },
+                        {
+                            "type": "input",
                             "label": "Badge Price",
                             "id": "badgePrice",
                             "default": "£0"
+                        },
+                        {
+                            "type": "input",
+                            "label": "Badge Price Font Size (px)",
+                            "id": "badgePriceFontSize",
+                            "default": "37"
                         },
                         {
                             "type": "input",
@@ -45,21 +57,45 @@
                         },
                         {
                             "type": "input",
-                            "label": "Content",
+                            "label": "Title Font Size (px)",
+                            "id": "productTitleFontSize",
+                            "default": "14"
+                        },
+                        {
+                            "type": "input",
+                            "label": "Price Before",
                             "id": "productPriceBefore",
                             "default": "Was £0"
                         },
                         {
                             "type": "input",
-                            "label": "Content",
+                            "label": "Price Before Font Size (px)",
+                            "id": "productPriceBeforeFontSize",
+                            "default": "14"
+                        },
+                        {
+                            "type": "input",
+                            "label": "Price Now",
                             "id": "productPriceNow",
                             "default": "Now £0"
+                        },
+                        {
+                            "type": "input",
+                            "label": "Price Now Font Size (px)",
+                            "id": "productPriceNowFontSize",
+                            "default": "14"
                         },
                         {
                             "type": "input",
                             "label": "Link",
                             "id": "productLink",
                             "default": "http://www.link.com"
+                        },
+                        {
+                            "type": "color",
+                            "label": "Badge color",
+                            "id": "BadgeColor",
+                            "default": "#57915a"
                         }
                     ]
                 }
